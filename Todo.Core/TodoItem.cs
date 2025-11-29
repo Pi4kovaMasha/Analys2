@@ -29,4 +29,3 @@ namespace Todo.Core
         }
     }
 }
-
