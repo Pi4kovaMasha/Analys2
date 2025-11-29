@@ -1,27 +1,32 @@
 root = true
 
 [*.cs]
-# Поднимать нарушения анализаторов как ошибки
+# ГЏГ®Г¤Г­ГЁГ¬Г ГІГј Г­Г Г°ГіГёГҐГ­ГЁГї Г Г­Г Г«ГЁГ§Г ГІГ®Г°Г®Гў ГЄГ ГЄ Г®ГёГЁГЎГЄГЁ
 dotnet_analyzer_diagnostic.severity = error
 
-# Включим некоторые StyleCop правила как ошибки
-dotnet_diagnostic.SA1300.severity = error # Element should begin with upper-case letter
-dotnet_diagnostic.SA1600.severity = error # Elements must be documented
+# Г€Г¬ГҐГ­Г  вЂ” ГЇГ°ГҐГ¤ГіГЇГ°ГҐГ¦Г¤ГҐГ­ГЁГҐ
+dotnet_diagnostic.SA1300.severity = warning # Element should begin with upper-case letter
+dotnet_diagnostic.SA1310.severity = warning # Field names should not contain underscores
+
+# Г„Г®ГЄГіГ¬ГҐГ­ГІГ Г¶ГЁГї вЂ” suggestion
+dotnet_diagnostic.SA1600.severity = suggestion # Elements must be documented(XML-comments)
+
+# ГЌГҐГ±ГЄГ®Г«ГјГЄГ® ГІГЁГЇГ®Гў Гў ГґГ Г©Г«ГҐ вЂ” Г®ГёГЁГЎГЄГ 
 dotnet_diagnostic.SA1402.severity = error # File may only contain a single type
 
-# Разрешаем var
+# ГђГ Г§Г°ГҐГёГ ГҐГ¬ var
 dotnet_diagnostic.IDE0007.severity = none # Use implicit type
 dotnet_diagnostic.IDE0008.severity = none # Use explicit type
 
-# Разрешаем expression-bodied методы
+# ГђГ Г§Г°ГҐГёГ ГҐГ¬ expression-bodied Г¬ГҐГІГ®Г¤Г»
 dotnet_diagnostic.IDE0022.severity = none # Use expression body for methods
 
-# Разрешаем new()
+# ГђГ Г§Г°ГҐГёГ ГҐГ¬ new()
 dotnet_diagnostic.IDE0090.severity = none # Simplify new()
 dotnet_diagnostic.SA1000.severity = none # Spacing around keywords
 dotnet_diagnostic.SA1200.severity = none # Using must be inside namespace
 
-# Не требовать this.
+# ГЌГҐ ГІГ°ГҐГЎГ®ГўГ ГІГј this.
 dotnet_diagnostic.SA1101.severity = none # Prefix local calls with this
 dotnet_diagnostic.IDE0003.severity = none # Remove 'this.' qualifier
 dotnet_diagnostic.IDE0009.severity = warning # Add 'this.' qualifier
@@ -37,6 +42,6 @@ dotnet_diagnostic.SA1116.severity = none
 dotnet_diagnostic.SA0001.severity = none
 dotnet_diagnostic.SA1513.severity = none
 
-# Стиль отступов (4 пробела на уровень)
+# Г‘ГІГЁГ«Гј Г®ГІГ±ГІГіГЇГ®Гў (4 ГЇГ°Г®ГЎГҐГ«Г  Г­Г  ГіГ°Г®ГўГҐГ­Гј)
 indent_style = space
 indent_size = 4
