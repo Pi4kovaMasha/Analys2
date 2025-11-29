@@ -13,7 +13,9 @@ namespace Todo.Core
     public class TodoList
     {
         private readonly List<TodoItem> items = new();
+
         public IReadOnlyList<TodoItem> Items => items.AsReadOnly();
+
         public TodoItem Add(string title)
         {
             TodoItem item = new(title);
@@ -28,12 +30,10 @@ namespace Todo.Core
 
         public IEnumerable<TodoItem> Find(string substring)
         {
-            return this.items.Where(i =>
-            i.Title.Contains(substring ?? string.Empty,
-           StringComparison.OrdinalIgnoreCase));
+            return items.Where(i =>
+                i.Title.Contains(substring ?? string.Empty, StringComparison.OrdinalIgnoreCase));
         }
 
         public int Count => this.items.Count;
     }
 }
-
