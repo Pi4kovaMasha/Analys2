@@ -1,6 +1,6 @@
 ﻿namespace Todo.SamleApp
 {
-    public class Class1
+    public class Program
     {
 
     }
